@@ -76,10 +76,89 @@
 #Escribir un programa que pregunte al usuario su edad y sus ingresos
 #mensuales y muestre por pantalla si el usuario tiene que tributar o no.
 
-age = int(input("Edad: "))
-ing= int(input("Ingresos Mensuales: "))
+#age = int(input("Edad: "))
+#ing= int(input("Ingresos Mensuales: "))
 
-if age >= 16 and ing >= 1000:
-    print("Tienes que atributar")
-else:
-    print("No tienes que atributar")
+#if age >= 16 and ing >= 1000:
+#    print("Tienes que atributar")
+#else:
+#    print("No tienes que atributar")
+
+
+#Los alumnos de un curso se han dividido en dos grupos A y B de acuerdo al sexo y el nombre.
+#El grupo A esta formado por las mujeres con un nombre anterior a la M y los hombres
+# con un nombre posterior a la N y el grupo B por el resto. Escribir un programa que
+# pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo que le corresponde.
+
+"""def obtener_grupo(nombre, sexo):
+    if (sexo == 'M' and nombre < 'M') or (sexo == 'H' and nombre > 'N'):
+        return 'Grupo A'
+    else:
+        return 'Grupo B'
+
+# Solicitar al usuario su nombre y sexo
+nombre = input("Ingrese su nombre: ")
+sexo = input("Ingrese su sexo (M/F): ")
+
+# Convertir el nombre a mayúsculas para hacer la comparación de manera insensible a mayúsculas/minúsculas
+nombre = nombre.upper()
+
+# Obtener el grupo correspondiente
+grupo = obtener_grupo(nombre, sexo)
+
+# Mostrar el resultado
+print(f"Usted pertenece al {grupo}.")"""
+
+#Escribir un programa que pregunte al usuario
+#su renta anual y muestre por pantalla el tipo impositivo
+#que le corresponde.
+
+
+"""def renta_anual(valor):
+    if renta <= 10000:
+        print(f"Tu renta anual es: {renta * 0.05}")
+    elif renta > 10000 and renta < 20000:
+        print(f"Tu renta anual es: {renta * 0.15}")
+    elif renta > 20000 and renta < 35000:
+        print(f"Tu renta anual es: {renta * 0.20}")
+    elif renta > 35000 and renta < 60000:
+        print(f"Tu renta anual es: {renta * 0.30}")
+    elif renta > 60000:
+        print(f"Tu renta anual es: {renta * 0.45}")
+
+renta = int(input("Escribe la renta: "))
+
+renta_anual(renta)"""
+
+"""
+En una determinada empresa, sus empleados son evaluados al final de cada año. 
+Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, 
+traduciéndose en mejores beneficios. Los puntos que pueden conseguir 
+los empleados pueden ser 0.0, 0.4, 0.6 o más, pero no valores intermedios entre las cifras mencionadas. 
+A continuación se muestra una tabla con los niveles correspondientes a cada puntuación. 
+La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada por la puntuación del nivel.
+
+Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, 
+así como la cantidad de dinero que recibirá el usuario.
+"""
+
+def puntuacion_user(puntos):
+    if puntos == 0.0:
+        print(f"Dinero conseguido: {puntos * 2400}")
+    elif puntos == 0.4:
+        print(f"Dinero conseguido:{puntos * 2400}")
+    elif puntos == 0.6:
+        print(f"Dinero conseguido: {puntos * 2400}")
+    else:
+        print("Elige un valor correcto")
+
+print("""
+Registra la puntuacion entre los siguientes valores
+0.0\t\t\t0.4\t\t\t0.6
+""")
+puntaje = float(input(":"))
+
+puntuacion_user(puntaje)
+
+
+
